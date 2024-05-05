@@ -1,0 +1,172 @@
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Màu nền xanh pastel */
+}
+
+header {
+    background-color: #eb7edc; /* Màu đỏ tươi sáng */
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden; /* Ẩn phần nội dung vượt ra khỏi phần header */
+    white-space: nowrap; /* Ngăn các dòng văn bản tự động xuống dòng */
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%); /* Di chuyển văn bản từ phải sang trái */
+    }
+}
+
+header h1 {
+    display: inline-block; /* Hiển thị tiêu đề như một block inline */
+    animation: slideInFromRight 10s linear infinite; /* Lặp vô hạn */
+}
+
+
+
+.profile.background-image {
+    background-image: url('../image/bgr.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-info {
+    max-width: 400px;
+}
+
+.profile-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: transform 0.5s ease; /* Thêm hiệu ứng transition cho thuộc tính transform */
+}
+
+.profile-image img:hover {
+    transform: scale(1.1); /* Khi rê chuột vào ảnh, phóng to lên 110% */
+}
+
+
+#current-time {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 20px;
+}
+
+.clock-icon {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+#clock-time {
+    font-size: 24px;
+}
+
+.travel {
+    background-color: #f8d4f3; /* Màu vàng nhạt */
+    padding: 20px;
+}
+
+.destination {
+    margin-bottom: 30px;
+}
+
+.destination h3 {
+    color: #2196f3; /* Màu xanh dương */
+}
+
+.destination p {
+    color: #4caf50; /* Màu xanh lá cây */
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.images img {
+    width: 45%;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .images {
+        flex-direction: column;
+    }
+
+    .images img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.contact-item img {
+    width: 100px; /* Đặt kích thước cho ảnh */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.contact-item p:nth-child(2) {
+    text-decoration: none; /* Xóa gạch chân */
+}
